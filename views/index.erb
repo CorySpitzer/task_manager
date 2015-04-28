@@ -1,4 +1,4 @@
-<h1>Task Manager<h1>
+<h1>Task Manager</h1>
 
 <ul>
 <% unless @tasks.nil? %>
@@ -13,9 +13,9 @@
     <label for="task-description">Task description:</label>
     <input id="task-description" name="task-description" type="text">
   </div>
-  <button type="submit">add task</button>
+  <button type="submit" class="btn-success">add task</button>
 </form>
 
 <form action="/clear">
-  <button type="submit">clear all tasks</button>
+  <button type="submit" class="btn-danger">clear all tasks</button>
 </form>
