@@ -7,6 +7,14 @@ describe('Task') do
     Task.clear
   end
 
+  describe('.clear') do
+    it('empties the task list') do
+      Task.new('clear the list').save
+      Task.clear
+      expect(Task.all).to(eq([]))
+    end
+  end
+
   describe('#description') do
     it('returns a description') do
       expect(Task.new('wash a zebra').description).to(eq('wash a zebra'))
