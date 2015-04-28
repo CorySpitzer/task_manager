@@ -1,0 +1,17 @@
+<h1>Task Manager<h1>
+
+<ul>
+<% unless @tasks.nil? %>
+  <% @tasks.each do |task| %>
+      <li><%= task.description %></li>
+  <% end %>
+<% end %>
+</ul>
+
+<form action="/success" method="post">
+  <div class="form-group">
+    <label for="task-description">Task description:</label>
+    <input id="task-description" name="task-description" type="text">
+  </div>
+  <button type="submit">add task</button>
+</form>
