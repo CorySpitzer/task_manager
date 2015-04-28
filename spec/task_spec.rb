@@ -17,5 +17,9 @@ describe('Task') do
       task = Task.new('wash a zebra')
       expect(Task.all).to(eq(['wash a zebra']))
     end
+
+    it('returns an empty array at first') do
+      expect(Task.all).to(eq([]))
+    end
   end
 end
