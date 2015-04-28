@@ -1,7 +1,8 @@
 require('sinatra')
 require('sinatra/reloader')
+require('./lib/task')
 also_reload('lib/*.rb')
-require('.lib/task')
+
 
 get('/') do
   @tasks = Task.all
